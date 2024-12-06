@@ -1,8 +1,19 @@
+import React from 'react';
 import {useState} from 'react';
 
+interface IProps {
+  word:IWord;
+}
 
+export interface IWord {
+  id: number;
+  day: string;
+  eng: string;
+  kor: string;
+  isDone: boolean;
+}
 
-export default function Word({word : w}) {
+export default function Word({word : w} : IProps) {
   const [word, setWord] = useState(w);
   const [isShow, setIsShow] = useState(false);
   const [isDone, setIsDone] = useState(word.isDone);
@@ -18,8 +29,6 @@ export default function Word({word : w}) {
         'Content-Type' : 'application/json',
       },
       body: JSON.stringify({
-
-        
         ...word,
         isDone : !isDone
       })
@@ -35,7 +44,14 @@ export default function Word({word : w}) {
         method:"DELETE",
       })
       .then(res => {
-        if(res.ok) { setWord({id:0})}
+        if(res.ok) { 
+          setWord(
+            {
+              ...word,
+              id:0
+            }
+          )
+        }
       })
     }
   }

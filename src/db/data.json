@@ -11,6 +11,18 @@
     {
       "id": "3",
       "day": 3
+    },
+    {
+      "id": "af80",
+      "day": 4
+    },
+    {
+      "id": "ce05",
+      "day": 5
+    },
+    {
+      "id": "def3",
+      "day": 6
     }
   ],
   "words": [
@@ -40,6 +52,27 @@
       "day": 3,
       "eng": "school",
       "kor": "학교",
+      "isDone": false
+    },
+    {
+      "id": "7cc3",
+      "day": "3",
+      "eng": "book",
+      "kor": "책책",
+      "isDone": false
+    },
+    {
+      "id": "d485",
+      "day": "1",
+      "eng": "window",
+      "kor": "창문",
+      "isDone": false
+    },
+    {
+      "id": "0297",
+      "day": "2",
+      "eng": "sound",
+      "kor": "소리",
       "isDone": false
     }
   ]
