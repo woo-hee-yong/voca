@@ -1,0 +1,22 @@
+//Union Types
+interface Car5 {
+  name : "car";
+  color: string;
+  start(): void;
+}
+
+interface Mobile{
+  name : "mobile";
+  color: string;
+  call() : void;
+}
+
+function getGift(gift: Car5 | Mobile) {
+  console.log(gift.color);
+  if(gift.name === "car"){
+    gift.start();
+  }else{
+    gift.call();
+  }
+  
+}

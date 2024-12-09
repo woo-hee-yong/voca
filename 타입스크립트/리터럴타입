@@ -1,0 +1,23 @@
+//Literal Types
+
+const userName1 = "Bob";
+let userName2 : string | number = "Tom";
+
+userName2 = 3;
+
+type Job = "police" | "developer" | "teacher";
+
+interface User4{
+  name : string;
+  job : Job;
+}
+
+const user4:User4 = {
+  name : "Bob",
+  job: "developer"
+}
+
+interface HighSchoolStudent {
+  name : number | string;
+  grade: 1 | 2 | 3;
+}
